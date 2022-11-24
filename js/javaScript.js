@@ -50,11 +50,15 @@ const button = document.querySelector('a.btn');
 button.addEventListener('click', function(){
     const userEmail = document.getElementById('email').value;
     console.log(userEmail);
+    let verify = 0;
     for (let i = 0; i < emailList.length; i++){
         if(userEmail === emailList[i]){
-            console.log('bentornato');
-        }else if (userEmail !== emailList[i]){
-            console.log('mi spiace');
+            verify = 1;
         }
     }
+        if (verify !== 0){
+        console.log('ci sei');
+        }else{
+        console.log('addios');
+        }
 })
